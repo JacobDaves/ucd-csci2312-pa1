@@ -5,7 +5,7 @@
 
 using namespace std;
 //function prototypes
-double computeArea(Point &, Point &, Point &);
+double computeArea(Point &A, Point &B, Point &C);
 
 int main() {
 
@@ -43,9 +43,9 @@ int main() {
         if(i == 0)
             C.setX(PointInput);
         if(i == 1);
-        C.setY(PointInput);
+            C.setY(PointInput);
         if(i == 2);
-        C.setZ(PointInput);
+            C.setZ(PointInput);
     }
     //Now i'm calling the compute area function while setting precision to 2
     cout << "The area of your Triangle is: ";
@@ -53,12 +53,12 @@ int main() {
 
 return 0;
 }
-// computeArea description...
-// Takes a 3 point reference and finds the area
+// computeArea...
+// Takes a 3 point reference and then finds the area
 double computeArea(Point &A, Point &B, Point &C) {
-    double AB = A.distanceTo(B);
-    double BC = B.distanceTo(C);
-    double CA = C.distanceTo(A);
-        return .25 * (sqrt((AB + BC + CA) * (BC + CA - AB) * (AB - BC + CA) * (AB + BC - CA)));
+    double side1 = A.distanceTo(B);
+    double side2 = B.distanceTo(C);
+    double side3 = C.distanceTo(A);
+        return .25 * (sqrt((side1 + side2 + side3) * (side1 + side2 - side3) * (side1 - side2 + side3) * (side1 + side2 - side3)));//Heron's theory
 }
 
