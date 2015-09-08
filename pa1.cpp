@@ -4,18 +4,10 @@
 #include <cmath>    //need for sqrt()
 
 using namespace std;
-// computeArea description...
-// Takes a 3 point reference and finds the area
-double computeArea(Point& A, Point& B, Point& C) {
-    double sideA = B.distanceTo(C);
-    double sideB = A.distanceTo(C);
-    double sideC = A.distanceTo(B);
-    double semiPerimeter = 2 / (sideA + sideB + sideC);
+//function prototypes
+double computeArea(Point &, Point &, Point &);
 
-    return sqrt(semiPerimeter * (semiPerimeter - sideA)*(semiPerimeter - sideB)*(semiPerimeter - sideC));
-}
-// main (aka driver)
-    int main() {
+int main() {
 
     Point A ;
     Point B ;
@@ -58,7 +50,15 @@ double computeArea(Point& A, Point& B, Point& C) {
     //Now i'm calling the compute area function while setting precision to 2
     cout << "The area of your Triangle is: ";
     cout << fixed << setprecision(2) << computeArea(A, B, C);
-    return 0;
-    }
 
-// global functions
+return 0;
+}
+// computeArea description...
+// Takes a 3 point reference and finds the area
+double computeArea(Point &A, Point &B, Point &C) {
+    double AB = A.distanceTo(B);
+    double BC = B.distanceTo(C);
+    double CA = C.distanceTo(A);
+        return .25 * (sqrt((AB + BC + CA) * (BC + CA - AB) * (AB - BC + CA) * (AB + BC - CA)));
+}
+
