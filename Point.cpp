@@ -55,7 +55,17 @@ double Point::getZ() {
     return z;
 }
 //member functions
-double Point::distanceTo(Point& OtherPoint) {
-    return sqrt(pow((x - OtherPoint.x),2) + pow((y - OtherPoint.y),2) + pow((z - OtherPoint.z),2));
+double Point::distanceTo(Point &OtherPoint) {
+   double PointDist = sqrt(pow((x - OtherPoint.getX()),2) + pow((y - OtherPoint.getY()),2) + pow((z - OtherPoint.getZ()),2));
+    return PointDist;
 } // Calculates the distance between the point and the one passed
 
+// computeArea...
+// Takes a 3 point reference and then finds the area
+double computeArea(Point &A, Point &B, Point &C) {
+    double side1 = A.distanceTo(B);
+    double side2 = B.distanceTo(C);
+    double side3 = A.distanceTo(C);
+        double TriArea = (sqrt((side1+side2+side3)*(side1+side2-side3)*(side2+side3-side1)*(side1+side3-side2))/4);//Heron's theory
+    return TriArea;
+}
