@@ -32,7 +32,7 @@ public:
     double getY();
     double getZ();
    //member functions
-    double distanceTo(Point&) const;
+    double distanceTo(Point&);
 };
 
 #endif // __point_h

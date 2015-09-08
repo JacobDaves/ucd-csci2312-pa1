@@ -55,7 +55,7 @@ double Point::getZ() {
     return z;
 }
 //member functions
-double Point::distanceTo(Point& OtherPoint) const{
+double Point::distanceTo(Point& OtherPoint) {
     return sqrt(pow((x - OtherPoint.x),2) + pow((y - OtherPoint.y),2) + pow((z - OtherPoint.z),2));
 } // Calculates the distance between the point and the one passed
 
