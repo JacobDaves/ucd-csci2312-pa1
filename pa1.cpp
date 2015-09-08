@@ -14,7 +14,7 @@ int main() {
     Point C (0,0,0) ;
         cout << "Hello-world\n" << "Welcome to your 3D triangle Area computing Program\n";
     // ill use a for loop to for each point to gather user data
-    cout << "Please enter the 'X', 'Y', and 'Z' cordinates in that order for the 1st Point\n";
+    cout << "Please enter the 'X', 'Y', and 'Z' cordinates in that order, and enter them one at a time, for the 1st Point\n";
     for(int i = 0; i < 3; i++) {
         double PointInput; // temporary value for x,y,z to be stored in an object
         cin >> PointInput;
@@ -25,7 +25,7 @@ int main() {
         if(i == 2)
             A.setZ(PointInput);
     }
-    cout << "Please enter the 'X', 'Y', and 'Z' cordinates in that order for the 2nd Point\n";
+    cout << "Please enter the 'X', 'Y', and 'Z' cordinates in that order, and enter them one at a time, for the 2nd Point\n";
     for(int i = 0; i < 3; i++) {
         double PointInput; // temporary value for x,y,z to be stored in an object
         cin >> PointInput;
@@ -36,7 +36,7 @@ int main() {
           if(i == 2)
               B.setZ(PointInput);
     }
-    cout << "Please enter the 'X', 'Y', and 'Z' cordinates in that order for the 3rd Point\n";
+    cout << "Please enter the 'X', 'Y', and 'Z' cordinates in that order, and enter them one at a time, for the 3rd Point\n";
     for(int i = 0; i < 3; i++) {
         double PointInput; // temporary value for x,y,z to be stored in an object
         cin >> PointInput;
