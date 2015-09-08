@@ -5,7 +5,7 @@
 
 using namespace std;
 //function prototypes
-double computeArea(Point &A, Point &B, Point &C);
+double computeArea(Point& A, Point& B, Point& C);
 
 int main() {
 
